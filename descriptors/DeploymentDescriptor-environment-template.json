@@ -1,0 +1,11 @@
+{
+  "srvcId" : "${artifactId}-${version}",
+  "descriptor" : {
+    "exec" : "java -jar ../${artifactId}/target/${artifactId}-fat.jar -Dhttp.port=%p",
+    "env": [
+      { "name" : "db.username", "value" : "finance_demo_admin" },
+      { "name" : "db.password", "value" : "admin" },
+      { "name" : "db.database", "value" : "finance_demo" }
+    ]
+  }
+}
